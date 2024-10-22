@@ -17,7 +17,7 @@
 <body>
     <div id="wrap">
         <div class="totop">
-            <a href="#top"><img src="images/totop.png" alt="totop"></a>
+            <a href="#"><img src="images/totop.png" alt="totop"></a>
         </div>
         <div id="header">           
             <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
@@ -403,15 +403,19 @@
     
     <script src="js/slider_script.js"></script>
     <script>
-        $(function(){
+        $(function(){       
 
-        
+            $(".m_search").click(function(){
+                $(".m_search_wrap").stop().slideToggle('fast');        
+                return false;
+            });	
 
-        $(".m_search").click(
-        function(){
-        $(".m_search_wrap").stop().slideToggle('fast');        
-        return false;
-        });	
+            $(".totop").click(function(){
+                $('html,body').animate({
+                    scrollTop:0
+                },400);
+                return false;
+            });
 
         });
     </script>
